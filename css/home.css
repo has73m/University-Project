@@ -1,0 +1,309 @@
+
+:root {
+    --primary-blue: #0088cc; /* اللون الأزرق الرئيسي */
+    --hover-blue: #006699;
+    --red-color: #c0392b;
+    --bg-overlay: rgba(255, 255, 255, 0.85); /* شفافية الخلفية البيضاء */
+    --text-color: #333;
+    --font-main: 'Cairo', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    direction: rtl;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* تنسيق الخلفية الكبيرة */
+.page-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.page-background .bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-background .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-overlay); /* طبقة بيضاء شفافة فوق الصورة */
+}
+
+/* الحاوية العامة */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ================= الهيدر ================= */
+.top-header {
+    padding: 20px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* منطقة الشعار والاسم */
+.logo-area {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area img {
+    height: 80px; /* حجم الشعار */
+    width: auto;
+}
+
+.logo-area h1 {
+    font-size: 1.5rem;
+    color: #1a3d5d;
+    font-weight: 700;
+}
+
+/* منطقة الترحيب (يمين) */
+.welcome-text h2 {
+    font-size: 1.2rem;
+    color: #444;
+}
+
+/* أزرار المستخدم (يسار) */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lang-switch {
+    font-weight: bold;
+    color: var(--primary-blue);
+    margin-left: 10px;
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.btn-icon {
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blue-btn {
+    background-color: var(--primary-blue);
+}
+
+.red-btn {
+    background-color: var(--red-color);
+}
+
+.btn-icon:hover {
+    opacity: 0.9;
+}
+
+/* ================= المحتوى الرئيسي ================= */
+.main-content {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    flex-grow: 1;
+}
+
+/* البطاقة البيضاء */
+.info-card {
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.card-body {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.card-image {
+    flex: 0 0 40%; /* الصورة تأخذ 40% من العرض */
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
+
+.card-text {
+    flex: 1;
+    text-align: right; /* المحاذاة الافتراضية للعربية */
+}
+
+.card-text h3 {
+    text-align: right; /* العنوان على اليمين */
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.card-text p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #777;
+    text-align: justify; /* محاذاة النص */
+    /* بما أن النص في الصورة لوريم إيبسوم إنجليزي، سيظهر من اليسار لليمين تلقائيا، 
+       لكن للنص العربي سيظهر بشكل صحيح */
+}
+
+/* ================= الأزرار الكبيرة ================= */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.action-btn {
+    flex: 1;
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 25px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.action-btn:hover {
+    background-color: var(--hover-blue);
+}
+
+.action-btn i {
+    font-size: 1.4rem;
+}
+
+/* ================= الفوتر ================= */
+.main-footer {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links li a {
+    color: white;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.footer-links li a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.footer-logo img {
+    height: 40px;
+    width: auto;
+}
+
+/* ================= التجاوب (Mobile) ================= */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .logo-area {
+        order: -1; /* الشعار أولاً في الموبايل */
+    }
+
+    .card-body {
+        flex-direction: column;
+    }
+    
+    .card-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        flex-direction: column-reverse;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
