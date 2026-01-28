@@ -32,3 +32,21 @@ theOtherCheckbox.addEventListener("change", function () {
     otherTextInput.value = ""; // Clear the text box when unchecked
   }
 });
+
+document.querySelectorAll('input[type="file"]').forEach((input) => {
+  input.addEventListener("change", function () {
+    const uploadText = document.getElementById(this.id + "UploadText");
+    const uploadBtn = document.getElementById(this.id + "UploadBtn");
+
+    const file = this.files[0];
+    const allowedTypes = ["image/png", "application/pdf"];
+
+    if (!allowedTypes.includes(file.type)) {
+      uploadText.textContent = "نوع الملف غير مسموح";
+      this.value = "";
+      return;
+    }
+
+    uploadText.textContent = `تم رفع الملف: ${file.name}`;
+  });
+});

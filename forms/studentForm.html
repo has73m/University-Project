@@ -33,30 +33,56 @@
         </div>
         <nav>
           <ul>
-            <li>
-              <img src="../images/homepage.png" alt="homepage" class="icon" />
-              <div class="navTitle">الرئيسية</div>
-            </li>
-            <li>
-              <img
-                src="../images/createEvent.png"
-                alt="create event"
-                class="icon"
-              />
-              <div class="navTitle">انشاء نشاط</div>
-            </li>
-            <li>
-              <img src="../images/Profile.png" alt="profile" class="icon" />
-              <div class="navTitle">لوحة المعلومات</div>
-            </li>
-            <li>
-              <img src="../images/homepage.png" alt="info" class="icon" />
-              <div class="navTitle">المستخدم</div>
-            </li>
-            <li>
-              <img src="../images/logout.png" alt="logout" class="icon" />
-              <div class="navTitle">خروج</div>
-            </li>
+            <a href="index.html">
+              <li>
+                <img
+                  src="../images/house-02-svgrepo-com.svg"
+                  alt="homepage"
+                  class="icon"
+                />
+                <div class="navTitle">الرئيسية</div>
+              </li>
+            </a>
+            <a href="create-event.html">
+              <li>
+                <img
+                  src="../images/pen-square-svgrepo-com.svg"
+                  alt="create event"
+                  class="icon"
+                />
+                <div class="navTitle">انشاء نشاط</div>
+              </li>
+            </a>
+            <a href="dashboard.html">
+              <li>
+                <img
+                  src="../images/panel-sectioned-svgrepo-com(4).svg"
+                  alt="profile"
+                  class="icon"
+                />
+                <div class="navTitle">لوحة المعلومات</div>
+              </li>
+            </a>
+            <a href="profile.html">
+              <li>
+                <img
+                  src="../images/profile-2-svgrepo-com.svg"
+                  alt="info"
+                  class="icon"
+                />
+                <div class="navTitle">المستخدم</div>
+              </li>
+            </a>
+            <a href="logout.html">
+              <li>
+                <img
+                  src="../images/log-out-svgrepo-com(2).svg"
+                  alt="logout"
+                  class="icon"
+                />
+                <div class="navTitle">خروج</div>
+              </li>
+            </a>
           </ul>
         </nav>
       </div>
@@ -326,70 +352,130 @@
           <section>
             <h2>مشرف النشاط</h2>
             <div class="form-grid">
-              <select>
-                <option>اختر الكلية</option>
-              </select>
-              <select>
-                <option>اسم عضو هيئة التدريس</option>
-              </select>
-              <input type="tel" placeholder="رقم الهاتف" />
+              <div class="input-sec3">
+                <label for="collegeName">اختر الكلية</label>
+                <select id="collegeName" name="collegeName">
+                  <option value="">اختر الكلية</option>
+                </select>
+              </div>
+
+              <div class="input-sec3">
+                <label for="facultyMemberName">اسم عضو هيئة التدريس</label>
+                <select id="facultyMemberName" name="facultyMemberName">
+                  <option value="">اسم عضو هيئة التدريس</option>
+                </select>
+              </div>
+
+              <div class="input-sec3">
+                <label for="phoneNumber">رقم الهاتف</label>
+                <input
+                  type="tel"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  placeholder="رقم الهاتف"
+                />
+              </div>
             </div>
           </section>
           <section class="attachments-section">
             <h2>المرفقات المطلوبة</h2>
 
             <div class="attachments-grid">
-              <!-- Block 1 -->
+              <!-- Attachment 2 -->
               <div class="attachment-block">
                 <p class="helper-text">
-                  هل يوجد لاعبين أو داعمين أو مشرفين للنشاط؟ (إذا كانت الإجابة
-                  نعم يرجى إرفاق نسخة)
-                </p>
-
-                <div class="upload-area">
-                  <button type="button">تحميل</button>
-                  <span class="upload-text">يرجى إرفاق نسخة</span>
-                  <span class="upload-icon">📎</span>
-                </div>
-
-                <p class="file-note">File Format : PNG , PDF</p>
-              </div>
-
-              <!-- Block 2 -->
-              <div class="attachment-block">
-                <p class="helper-text">
-                  هل يوجد ضيوف (ضيف من خارج الجامعة)؟ (إذا كانت الإجابة نعم
-                  إرفاق نسخة داعمة)
+                  هل يوجد ضيوف (ضيف من خارج الجامعة)؟
+                  <span> (إذا كانت الإجابة نعم إرفاق سيرة ذاتيه) </span>
                 </p>
 
                 <input type="text" placeholder="اذكر الضيوف من خارج الجامعة" />
 
-                <div class="upload-area">
-                  <button type="button">تحميل</button>
-                  <span class="upload-text">يرجى إرفاق الوثائق الداعمة</span>
-                  <span class="upload-icon">📎</span>
-                </div>
+                <label for="guest_documents" class="upload-area">
+                  <span id="guest_documentsUploadIcon" class="upload-icon"
+                    >🧷</span
+                  >
+                  <span id="guest_documentsUploadText" class="upload-text"
+                    >يرجى إرفاق سيرةذاتية</span
+                  >
+                  <span id="guest_documentsuploadBtn" class="upload-btn"
+                    >تحميل</span
+                  >
+                </label>
 
-                <p class="file-note">File Format : PNG , PDF</p>
+                <input
+                  type="file"
+                  id="guest_documents"
+                  name="guest_documents"
+                  accept=".png,.pdf"
+                  hidden
+                />
+
+                <p class="file-note">File Format: PNG, PDF</p>
+              </div>
+              <!-- Attachment 1 -->
+              <div class="attachment-block">
+                <p class="helper-text">
+                  هل يوجد راعيين أو داعمين أو متبرعين للنشاط؟
+                  <span> (إذا كانت الإجابة نعم يرجى إرفاق نسخة) </span>
+                </p>
+
+                <label for="supporting_documents" class="upload-area">
+                  <span id="supporting_documentsUploadIcon" class="upload-icon"
+                    >🧷</span
+                  >
+                  <span id="supporting_documentsUploadText" class="upload-text"
+                    >يرجى إرفاق نسخة</span
+                  >
+                  <span id="supporting_documentsUploadbtn" class="upload-btn"
+                    >تحميل</span
+                  >
+                </label>
+
+                <input
+                  type="file"
+                  id="supporting_documents"
+                  name="supporting_documents"
+                  accept=".png,.pdf"
+                  hidden
+                />
+
+                <p class="file-note">File Format: PNG, PDF</p>
               </div>
 
-              <!-- Block 3 (full width) -->
+              <!-- Attachment 3 (Full width) -->
               <div class="attachment-block full-width">
                 <p class="helper-text">
                   هل سيتم توزيع أي مواد (ورقية، دعائية، أو ضيافة) أو عرضها على
-                  الطلبة؟ (إذا كانت الإجابة نعم يرجى ذكر نوع المواد وإرفاق نسخة
-                  من كل ما سبق توزيعه)
+                  الطلبة؟
+                  <span
+                    >(إذا كانت الإجابة نعم يرجى ذكر نوع المواد وإرفاق نسخة عن كل
+                    ما سيتم توزيعه)</span
+                  >
                 </p>
 
                 <input type="text" placeholder="اذكر المواد" />
 
-                <div class="upload-area">
-                  <button type="button">تحميل</button>
-                  <span class="upload-text">يرجى إرفاق نسخة من المواد</span>
-                  <span class="upload-icon">📎</span>
-                </div>
+                <label for="materials_documents" class="upload-area">
+                  <span id="materials_documentsUploadIcon" class="upload-icon"
+                    >🧷</span
+                  >
+                  <span id="materials_documentsUploadText" class="upload-text"
+                    >يرجى إرفاق نسخة من المواد</span
+                  >
+                  <span id="materials_documentsUploadBtn" class="upload-btn"
+                    >تحميل</span
+                  >
+                </label>
 
-                <p class="file-note">File Format : PNG , PDF</p>
+                <input
+                  type="file"
+                  id="materials_documents"
+                  name="materials_documents"
+                  accept=".png,.pdf"
+                  hidden
+                />
+
+                <p class="file-note">File Format: PNG, PDF</p>
               </div>
             </div>
           </section>

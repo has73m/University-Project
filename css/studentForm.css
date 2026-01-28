@@ -15,6 +15,10 @@ body {
   height: 100vh;
   direction: rtl;
 }
+a {
+  text-decoration: none;
+  color: white;
+}
 .title {
   font-weight: bold;
 }
@@ -54,6 +58,7 @@ body {
 #active-bar:checked ~ #sideBar #closeBar img {
   display: block;
   position: relative;
+  margin-bottom: 10px;
 }
 
 #active-bar:checked ~ #sideBar {
@@ -74,6 +79,8 @@ body {
   align-items: center;
   justify-content: flex-end;
   width: 100%;
+  margin-top: 20%;
+  padding: 10px;
 }
 #logo .title {
   font-size: 1rem;
@@ -84,7 +91,9 @@ body {
 #logo img {
   width: 60px;
 }
-
+.icon {
+  width: clamp(30px, 70%, 50px);
+}
 nav {
   margin-top: 5%;
   width: 100%;
@@ -93,6 +102,7 @@ nav {
 nav ul {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 nav ul li {
@@ -257,7 +267,8 @@ textarea:focus {
   width: auto;
 }
 
-label span {
+label span,
+p span {
   font-size: 0.8rem;
 }
 /* Full width elements */
@@ -279,6 +290,9 @@ textarea,
   top: 4px;
 }
 
+.input-sec3 option {
+  color: #ca3737;
+}
 /* ====== FILE UPLOAD ====== */
 .attachments-section {
   direction: rtl;
@@ -286,6 +300,8 @@ textarea,
 }
 
 .attachments-section h2 {
+  font-size: 20px;
+  font-weight: 700;
   margin-bottom: 25px;
 }
 
@@ -318,10 +334,7 @@ textarea,
   padding: 12px 14px;
   border-radius: 6px;
   border: 1px solid #ccc;
-}
-
-.attachments-section input[type="text"]::placeholder {
-  color: #999;
+  font-size: 14px;
 }
 
 .attachments-section input[type="text"]:focus {
@@ -329,7 +342,7 @@ textarea,
   border-color: #0288d1;
 }
 
-/* Upload box */
+/* Upload area (label) */
 .upload-area {
   border: 2px dashed #7da7ff;
   border-radius: 10px;
@@ -337,22 +350,22 @@ textarea,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-/* Upload button */
-.upload-area button {
-  background-color: transparent;
+.upload-area:hover {
+  background-color: #eef4ff;
+}
+
+/* Upload button look */
+.upload-btn {
   border: 1px solid #7da7ff;
   color: #0288d1;
   padding: 6px 16px;
   border-radius: 6px;
-  cursor: pointer;
+  font-size: 13px;
   white-space: nowrap;
-}
-
-.upload-area button:hover {
-  background-color: #eaf2ff;
 }
 
 /* Upload text */
@@ -372,6 +385,13 @@ textarea,
   font-size: 11px;
   color: #777;
   text-align: left;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .attachments-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ====== SUBMIT BUTTON ====== */
