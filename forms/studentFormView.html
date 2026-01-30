@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Form</title>
-    <link rel="stylesheet" href="../css/studentForm.css" />
-    <script defer src="../js/studentForm.js"></script>
+    <title>View Student Form</title>
+    <link rel="stylesheet" href="../css/studentFormView.css" />
+    <script defer src="../js/studentFormView.js"></script>
   </head>
   <body>
     <div id="container">
@@ -44,7 +44,7 @@
               </li>
             </a>
             <a href="create-event.html">
-              <li id="navTitleActive">
+              <li>
                 <img
                   src="../images/pen-square-svgrepo-com.svg"
                   alt="create event"
@@ -88,7 +88,14 @@
       </div>
       <div class="form">
         <form action="" method="post">
-          <h1 class="title">إنشاء نشاط جديد</h1>
+          <section>
+            <div class="form-grid">
+              <div class="title-date">
+                <h1 class="topTitle">إنشاء نشاط جديد</h1>
+                <div class="date">تاريخ انشاء النشاط</div>
+              </div>
+            </div>
+          </section>
           <section>
             <h2>البيانات المطلوب تعبئتها من الطالب</h2>
             <div class="form-grid">
@@ -100,6 +107,7 @@
                   id="sname"
                   type="text"
                   placeholder="اسم الطالب"
+                  disabled
                 />
               </div>
               <div class="input-sec1">
@@ -109,6 +117,7 @@
                   name="sId"
                   type="text"
                   placeholder="رقم الطالب الجامعي"
+                  disabled
                 />
               </div>
               <div class="input-sec1">
@@ -119,6 +128,7 @@
                   name="email"
                   type="email"
                   placeholder="البريد الإلكتروني"
+                  disabled
                 />
               </div>
               <div class="input-sec1">
@@ -129,6 +139,7 @@
                   type="tel"
                   placeholder="رقم الهاتف"
                   required
+                  disabled
                 />
               </div>
               <div class="input-sec1">
@@ -139,11 +150,12 @@
                   type="text"
                   placeholder="اسم الجهة مقدمة النشاط"
                   required
+                  disabled
                 />
               </div>
               <div class="input-sec1">
                 <label for="college">اختر الكلية</label>
-                <select required id="college" name="college">
+                <select required id="college" name="college" disabled>
                   <option>اختر الكلية</option>
                 </select>
               </div>
@@ -163,6 +175,7 @@
                       id="other"
                       name="activityTypes"
                       value="اخرى"
+                      disabled
                     />
                     <label for="other">اخرى</label>
                   </div>
@@ -174,6 +187,7 @@
                       id="competition"
                       name="activityTypes"
                       value="مسابقة"
+                      disabled
                     />
                     <label for="competition">مسابقة</label>
                   </div>
@@ -185,6 +199,7 @@
                       id="exhibition"
                       name="activityTypes"
                       value="معرض"
+                      disabled
                     />
                     <label for="exhibition">معرض</label>
                   </div>
@@ -196,6 +211,7 @@
                       id="workshop"
                       name="activityTypes"
                       value="ورشة"
+                      disabled
                     />
                     <label for="workshop">ورشة</label>
                   </div>
@@ -207,6 +223,7 @@
                       id="trainingCourse"
                       name="activityTypes"
                       value="دورة تدريبية"
+                      disabled
                     />
                     <label for="trainingCourse">دورة تدريبية</label>
                   </div>
@@ -218,6 +235,7 @@
                       id="lecture"
                       name="activityTypes"
                       value="محاضرة"
+                      disabled
                     />
                     <label for="lecture">محاضرة</label>
                   </div>
@@ -229,6 +247,7 @@
                       id="initiative"
                       name="activityTypes"
                       value="مبادرة"
+                      disabled
                     />
                     <label for="initiative">مبادرة</label>
                   </div>
@@ -243,6 +262,7 @@
                     id="otherText"
                     name="otherActivityType"
                     placeholder="يرجى تحديد نوع النشاط"
+                    disabled
                   />
                 </div>
               </div>
@@ -255,6 +275,7 @@
                   name="eventTitle"
                   placeholder="اسم عنوان الفعالية"
                   required
+                  disabled
                 />
               </div>
               <div class="input-sec2">
@@ -268,6 +289,7 @@
                   name="eventTitleInPoster"
                   placeholder="اسم عنوان الفعالية في الاعلان"
                   required
+                  disabled
                 />
               </div>
 
@@ -278,6 +300,7 @@
                   name="activityDescription"
                   placeholder="وصف النشاط"
                   required
+                  disabled
                 ></textarea>
               </div>
 
@@ -288,6 +311,7 @@
                   name="activityGoals"
                   placeholder="أهداف النشاط"
                   required
+                  disabled
                 ></textarea>
               </div>
 
@@ -303,21 +327,38 @@
                   name="attendanceType"
                   placeholder="نوع الحضور"
                   required
+                  disabled
                 />
               </div>
 
               <div class="input-sec2">
                 <label for="eventDate">تاريخ الفعالية</label>
-                <input type="date" id="eventDate" name="eventDate" required />
+                <input
+                  type="date"
+                  id="eventDate"
+                  name="eventDate"
+                  required
+                  disabled
+                />
               </div>
               <div id="time-section">
                 <div id="timeStart" class="input-sec2">
                   <label for="startTime">وقت البداية</label>
-                  <input type="time" id="startTime" name="startTime required" />
+                  <input
+                    type="time"
+                    id="startTime"
+                    name="startTime required"
+                    disabled
+                  />
                 </div>
                 <div id="timeEnd" class="input-sec2">
                   <label for="endTime">وقت النهاية</label>
-                  <input type="time" id="endTime" name="endTime required" />
+                  <input
+                    type="time"
+                    id="endTime"
+                    name="endTime required"
+                    disabled
+                  />
                 </div>
               </div>
 
@@ -332,6 +373,7 @@
                   name="expectedCost"
                   placeholder="ادخل التكلفة المالية "
                   required
+                  disabled
                 />
               </div>
 
@@ -349,6 +391,7 @@
                   name="support"
                   placeholder="ادخل الخدمات المساندة المطلوب توفرها لإقامة النشاط"
                   required
+                  disabled
                 />
               </div>
               <div class="input-sec2">
@@ -362,6 +405,7 @@
                   name="sponsor"
                   placeholder="الرجاء الذكر مع التفاصيل"
                   required
+                  disabled
                 />
               </div>
             </div>
@@ -372,14 +416,18 @@
             <div class="form-grid">
               <div class="input-sec3">
                 <label for="collegeName">اختر الكلية</label>
-                <select id="collegeName" name="collegeName">
+                <select id="collegeName" name="collegeName" disabled>
                   <option value="">اختر الكلية</option>
                 </select>
               </div>
 
               <div class="input-sec3">
                 <label for="facultyMemberName">اسم عضو هيئة التدريس</label>
-                <select id="facultyMemberName" name="facultyMemberName">
+                <select
+                  id="facultyMemberName"
+                  name="facultyMemberName"
+                  disabled
+                >
                   <option value="">اسم عضو هيئة التدريس</option>
                 </select>
               </div>
@@ -392,6 +440,7 @@
                   name="phoneNumber"
                   placeholder="رقم الهاتف"
                   required
+                  disabled
                 />
               </div>
             </div>
@@ -407,27 +456,28 @@
                   <span> (إذا كانت الإجابة نعم إرفاق سيرة ذاتيه) </span>
                 </p>
 
-                <input type="text" placeholder="اذكر الضيوف من خارج الجامعة" />
-
-                <label for="guest_documents" class="upload-area">
-                  <span id="guest_documentsUploadIcon" class="upload-icon"
-                    >🧷</span
-                  >
-                  <span id="guest_documentsUploadText" class="upload-text"
-                    >يرجى إرفاق سيرة ذاتية</span
-                  >
-                  <span id="guest_documentsuploadBtn" class="upload-btn"
-                    >تحميل</span
-                  >
-                </label>
-
                 <input
-                  type="file"
-                  id="guest_documents"
-                  name="guest_documents"
-                  accept=".png,.pdf"
-                  hidden
+                  type="text"
+                  placeholder="اذكر الضيوف من خارج الجامعة"
+                  disabled
                 />
+                <a href="#" id="materials_documentsLink">
+                  <label for="guest_documents" class="upload-area">
+                    <span id="guest_documentsUploadIcon" class="upload-icon"
+                      ><img
+                        class="uploadIcon"
+                        src="../images/folder-check-svgrepo-com(1).svg"
+                        alt="folder"
+                    /></span>
+                    <span
+                      id="guest_documentsUploadText"
+                      class="upload-text"
+                    ></span>
+                    <span id="guest_documentsuploadBtn" class="upload-btn"
+                      >تحميل</span
+                    >
+                  </label>
+                </a>
 
                 <p class="file-note">File Format: PNG, PDF</p>
               </div>
@@ -438,17 +488,27 @@
                   <span> (إذا كانت الإجابة نعم يرجى إرفاق نسخة) </span>
                 </p>
 
-                <label for="supporting_documents" class="upload-area">
-                  <span id="supporting_documentsUploadIcon" class="upload-icon"
-                    >🧷</span
-                  >
-                  <span id="supporting_documentsUploadText" class="upload-text"
-                    >يرجى إرفاق نسخة</span
-                  >
-                  <span id="supporting_documentsUploadbtn" class="upload-btn"
-                    >تحميل</span
-                  >
-                </label>
+                <a href="#" id="materials_documentsLink">
+                  <label for="supporting_documents" class="upload-area">
+                    <span
+                      id="supporting_documentsUploadIcon"
+                      class="upload-icon"
+                      ><img
+                        class="uploadIcon"
+                        src="../images/folder-check-svgrepo-com(1).svg"
+                        alt="folder"
+                    /></span>
+                    <!-- put the file name here using href -->
+                    <span
+                      id="supporting_documentsUploadText"
+                      class="upload-text"
+                      >file.pdf</span
+                    >
+                    <span id="supporting_documentsUploadbtn" class="upload-btn"
+                      >تحميل</span
+                    >
+                  </label>
+                </a>
 
                 <input
                   type="file"
@@ -456,6 +516,7 @@
                   name="supporting_documents"
                   accept=".png,.pdf"
                   hidden
+                  disabled
                 />
 
                 <p class="file-note">File Format: PNG, PDF</p>
@@ -472,34 +533,30 @@
                   >
                 </p>
 
-                <input type="text" placeholder="اذكر المواد" />
+                <input type="text" placeholder="اذكر المواد" disabled />
 
-                <label for="materials_documents" class="upload-area">
-                  <span id="materials_documentsUploadIcon" class="upload-icon"
-                    >🧷</span
-                  >
-                  <span id="materials_documentsUploadText" class="upload-text"
-                    >يرجى إرفاق نسخة من المواد</span
-                  >
-                  <span id="materials_documentsUploadBtn" class="upload-btn"
-                    >تحميل</span
-                  >
-                </label>
-
-                <input
-                  type="file"
-                  id="materials_documents"
-                  name="materials_documents"
-                  accept=".png,.pdf"
-                  hidden
-                />
+                <a href="studentForm.html" id="materials_documentsLink">
+                  <label for="materials_documents" class="upload-area">
+                    <span id="materials_documentsUploadIcon" class="upload-icon"
+                      ><img
+                        class="uploadIcon"
+                        src="../images/folder-check-svgrepo-com(1).svg"
+                        alt="folder"
+                    /></span>
+                    <!-- put the file name here using href -->
+                    <span id="materials_documentsUploadText" class="upload-text"
+                      >file.pdf</span
+                    >
+                    <span id="materials_documentsUploadBtn" class="upload-btn"
+                      >تحميل</span
+                    >
+                  </label>
+                </a>
 
                 <p class="file-note">File Format: PNG, PDF</p>
               </div>
             </div>
           </section>
-
-          <button type="submit" class="submit-btn">إرسال الطلب</button>
         </form>
       </div>
     </div>
