@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Requests</title>
+    <link rel="stylesheet" href="../css/requests.css" />
+    <script defer src="../js/requests.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <input type="checkbox" id="active-bar" />
+      <div id="sideBar">
+        <label id="closeBar" for="active-bar"
+          ><img
+            class="styled-svg"
+            src="../images/hide-sidebar-horiz-svgrepo-com(1).svg"
+            alt="My SVG Icon"
+            width="20px"
+            height="20px"
+        /></label>
+        <label id="openBar" for="active-bar"
+          ><img
+            class="styled-svg"
+            src="../images/open-sidebar-horiz-svgrepo-com(2).svg"
+            alt="My SVG Icon"
+            width="20px"
+            height="20px"
+        /></label>
+        <div id="logo">
+          <img src="../images/logo4.jpg" alt="JU LOGO" />
+          <div class="title">بوابـــة إدارة الفعــاليــات</div>
+        </div>
+        <nav>
+          <ul>
+            <a href="index.html">
+              <li>
+                <img
+                  src="../images/house-02-svgrepo-com.svg"
+                  alt="homepage"
+                  class="icon"
+                />
+                <div class="navTitle">الرئيسية</div>
+              </li>
+            </a>
+            <a href="create-event.html">
+              <li id="ordersSide">
+                <img
+                  src="../images/order-svgrepo-com(1).svg"
+                  alt="create event"
+                  class="icon"
+                />
+                <div class="navTitle">الطلبات</div>
+              </li>
+            </a>
+            <a href="dashboard.html">
+              <li>
+                <img
+                  src="../images/panel-sectioned-svgrepo-com(4).svg"
+                  alt="profile"
+                  class="icon"
+                />
+                <div class="navTitle">لوحة المعلومات</div>
+              </li>
+            </a>
+            <a href="profile.html">
+              <li>
+                <img
+                  src="../images/profile-2-svgrepo-com.svg"
+                  alt="info"
+                  class="icon"
+                />
+                <div class="navTitle">المستخدم</div>
+              </li>
+            </a>
+            <a href="logout.html">
+              <li>
+                <img
+                  src="../images/log-out-svgrepo-com(2).svg"
+                  alt="logout"
+                  class="icon"
+                />
+                <div class="navTitle">خروج</div>
+              </li>
+            </a>
+          </ul>
+        </nav>
+      </div>
+      <div class="requests-container">
+        <h1 class="page-title">الطلبات</h1>
+
+        <div class="requests-list">
+          <!-- Cards will be dynamically inserted here -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <!-- Pagination buttons will be dynamically inserted here -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

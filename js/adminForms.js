@@ -3,6 +3,7 @@
 // const theOtherCheckbox = document.getElementById("other");
 // const otherTextBox = document.getElementById("otherTextBox");
 // const otherTextInput = document.getElementById("otherText");
+
 const form = document.querySelector("form");
 const adminType = getType(); //get the type of admin(admin,dean....) from api
 const rejectBtn = document.querySelector(".cancel-btn");
