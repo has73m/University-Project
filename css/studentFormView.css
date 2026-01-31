@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Cairo", sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html {
@@ -36,6 +36,7 @@ a {
   width: 13%;
   height: auto;
   position: relative;
+  transition: width 0.3s;
 }
 #closeBar img {
   display: none;
@@ -67,6 +68,9 @@ a {
 }
 #active-bar:checked ~ #sideBar #logo .title {
   display: none;
+}
+#active-bar:checked ~ #sideBar #logo {
+  justify-content: center;
 }
 #active-bar:checked ~ #sideBar ul li .icon {
   align-items: center;
@@ -112,6 +116,7 @@ nav ul li {
   grid-template-columns: 1fr 2fr;
   align-items: center;
   padding-right: 10px;
+  font-size: 0.875rem;
 }
 
 .icons {
@@ -457,7 +462,7 @@ textarea,
 
 .step-label {
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   color: #4b5563;
   line-height: 1.4;
   max-width: 100px;
