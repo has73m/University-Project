@@ -403,14 +403,32 @@ textarea,
 }
 
 /* ====== SUBMIT BUTTON ====== */
-.submit-btn {
+.accept-btn {
   background-color: #0288d1;
   color: white;
   border: none;
-  padding: 14px 40px;
+  padding: 14px 60px;
   border-radius: 6px;
   font-size: 16px;
   cursor: pointer;
+  margin-left: 10px;
+}
+.accept-btn:hover {
+  background-color: #0277bd;
+}
+.cancel-btn {
+  background-color: #ebf5fb;
+  color: #0288d1;
+  border: none;
+  padding: 14px 60px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid #0288d1;
+}
+
+.cancel-btn:hover {
+  background-color: #d6eaf8;
 }
 
 .submit-btn:hover {
