@@ -127,6 +127,10 @@ nav ul li:hover {
   background-color: #3fa5dc;
 }
 
+#infoPanel {
+  background-color: #3fa5dc;
+}
+
 #dashboard {
   background-color: #3fa5dc;
 }
@@ -250,6 +254,9 @@ nav ul li:hover {
   gap: 8px;
 }
 
+.add-request-btn:hover {
+  background-color: #016bb2;
+}
 .filters {
   display: flex;
   gap: 10px;
