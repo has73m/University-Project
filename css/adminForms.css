@@ -1,0 +1,518 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  height: 100vh;
+}
+body {
+  background-color: #f5f7fa;
+  height: 100vh;
+  direction: rtl;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.title {
+  font-weight: bold;
+  margin: none;
+}
+#container {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+}
+
+#sideBar {
+  grid-column: 1;
+  color: white;
+  background-color: #0288d1;
+  width: 13%;
+  height: auto;
+  position: relative;
+  transition: width 0.3s;
+}
+#closeBar img {
+  display: none;
+}
+#openBar img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#openBar:hover,
+#closeBar:hover {
+  cursor: pointer;
+}
+#active-bar {
+  display: none;
+}
+
+#active-bar:checked ~ #sideBar #openBar img {
+  display: none;
+}
+#active-bar:checked ~ #sideBar #closeBar img {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+#active-bar:checked ~ #sideBar {
+  width: 5%;
+}
+#active-bar:checked ~ #sideBar #logo .title {
+  display: none;
+}
+#active-bar:checked ~ #sideBar ul li .icon {
+  align-items: center;
+  justify-content: center;
+}
+#active-bar:checked ~ #sideBar ul li div {
+  display: none;
+}
+#logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 20%;
+  padding: 10px;
+}
+#logo .title {
+  font-size: 1rem;
+  flex-grow: 2;
+  position: relative;
+}
+#logo img {
+  width: 60px;
+}
+.icon {
+  width: clamp(25px, 60%, 50px);
+}
+nav {
+  margin-top: 5%;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+nav ul li {
+  width: 100%;
+  height: 40px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.icons {
+  padding: none;
+}
+
+nav ul li:hover {
+  background-color: #3fa5dc;
+}
+
+/*from sections*/
+
+.form {
+  flex-grow: 1;
+  padding: 40px 40px;
+}
+
+#mainContent {
+  background-color: white;
+  padding: 40px 60px;
+  overflow-y: auto;
+}
+
+.topTitle {
+  font-size: 26px;
+  font-weight: 700;
+}
+.date {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* ====== SECTIONS ====== */
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* ====== FORM GRID ====== */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+}
+
+.form-section {
+  margin: none;
+  font-family: Arial, sans-serif;
+}
+
+.section-title {
+  padding: none;
+  display: block;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: right;
+  direction: rtl;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 15px;
+  flex-wrap: wrap;
+  direction: rtl;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  direction: rtl;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.checkbox-item input[type="checkbox"]:first-child {
+  cursor: default;
+}
+
+.checkbox-item label {
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.checkbox-item:first-child label {
+  cursor: default;
+}
+
+.other-text-container input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  direction: rtl;
+  text-align: right;
+}
+
+.other-text-container input[type="text"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+/* ====== INPUTS ====== */
+.input-sec1 label {
+  margin-right: 5px;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+textarea {
+  min-height: 50px;
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0288d1;
+}
+#time-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+#time #endTime,
+#time #startTime {
+  direction: ltr;
+  width: auto;
+}
+
+label span,
+p span {
+  font-size: 0.8rem;
+}
+/* Full width elements */
+textarea,
+.checkbox-group {
+  grid-column: 1 / -1;
+}
+
+/* ====== CHECKBOX GROUP ====== */
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.checkbox-group label {
+  font-size: 14px;
+  position: relative;
+  top: 4px;
+}
+
+.input-sec3 option {
+  color: #ca3737;
+}
+/* ====== FILE UPLOAD ====== */
+.attachments-section {
+  direction: rtl;
+  margin-top: 40px;
+}
+
+.attachments-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* Grid */
+.attachments-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 30px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Block */
+.attachment-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Helper text */
+.helper-text {
+  line-height: 1.6;
+}
+
+/* Text input */
+.attachments-section input[type="text"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.attachments-section input[type="text"]:focus {
+  outline: none;
+  border-color: #0288d1;
+}
+
+/* Upload area (label) */
+.upload-area {
+  border: 2px solid #a8a8a8;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.upload-area:hover {
+  background-color: #dddfe2;
+}
+
+/* Upload button look */
+.upload-btn {
+  border: 1px solid #7da7ff;
+  color: #0288d1;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* Upload text */
+.upload-text {
+  font-size: 13px;
+  color: #333;
+}
+
+/* Icon */
+.upload-icon {
+  font-size: 16px;
+  color: #7da7ff;
+}
+
+/* File note */
+.file-note {
+  font-size: 11px;
+  color: #777;
+  text-align: left;
+}
+
+.uploadIcon {
+  width: 30px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .attachments-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ====== SUBMIT BUTTON ====== */
+.accept-btn {
+  background-color: #0288d1;
+  color: white;
+  border: none;
+  padding: 14px 60px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.accept-btn:hover {
+  background-color: #0277bd;
+}
+.cancel-btn {
+  background-color: #ebf5fb;
+  color: #0288d1;
+  border: none;
+  padding: 14px 60px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid #0288d1;
+}
+
+.cancel-btn:hover {
+  background-color: #d6eaf8;
+}
+
+.submit-btn:hover {
+  background-color: #0277bd;
+}
+
+.requiredCheckbox {
+  font-size: 0.8;
+  color: red;
+  display: none;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  padding: 0 20px;
+  gap: 10px;
+  background-color: #ebeaea;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: solid 1px #d4d2d2;
+  margin-top: 5px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.step-circle {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 16px;
+  object-fit: cover;
+  /* border: 3px solid #f3f4f6; */
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.step-label {
+  text-align: center;
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.4;
+  max-width: 100px;
+}
+
+/* Connection line between circles */
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .steps-container {
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 10px;
+  }
+
+  .step {
+    flex: 0 0 calc(33.333% - 20px);
+    min-width: 100px;
+  }
+
+  .step-circle {
+    width: 60px;
+    height: 60px;
+  }
+
+  .step-label {
+    font-size: 12px;
+    max-width: 80px;
+  }
+
+  .steps-container::before {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .step {
+    flex: 0 0 calc(50% - 15px);
+  }
+}

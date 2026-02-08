@@ -1,0 +1,175 @@
+{
+  "stats": {
+    "overdue": 3,
+    "completed": 3,
+    "pending": 3,
+    "total": 9
+  },
+  "requests": [
+    {
+      "id": 1,
+      "publishDate": "25-SEP-2024",
+      "studentName": "أحمد محمد علي",
+      "studentEmail": "ahmed.ali@student.edu.qa",
+      "activityDate": "2024-09-20T14:30:00",
+      "organizer": "نادي الطلاب",
+      "status": [
+        "pending",
+        "pending",
+        "pending",
+        "pending",
+        "pending",
+        "pending"
+      ]
+    },
+    {
+      "id": 2,
+      "publishDate": "25-SEP-2024",
+      "studentName": "فاطمة حسن خليل",
+      "studentEmail": "fatima.hassan@student.edu.qa",
+      "activityDate": "2024-09-22T10:00:00",
+      "organizer": "اللجنة الثقافية",
+      "status": [
+        "pending",
+        "pending",
+        "pending",
+        "pending",
+        "pending",
+        "pending"
+      ]
+    },
+    {
+      "id": 3,
+      "publishDate": "25-SEP-2024",
+      "studentName": "خالد عبدالله السيد",
+      "studentEmail": "khaled.abdullah@student.edu.qa",
+      "activityDate": "2024-09-18T16:00:00",
+      "organizer": "النادي الرياضي",
+      "status": [
+        "pending",
+        "pending",
+        "pending",
+        "approved",
+        "approved",
+        "approved"
+      ]
+    },
+    {
+      "id": 4,
+      "publishDate": "25-SEP-2024",
+      "studentName": "مريم سعيد أحمد",
+      "studentEmail": "mariam.saeed@student.edu.qa",
+      "activityDate": "2024-09-25T11:30:00",
+      "organizer": "النادي العلمي",
+      "status": [
+        "rejected",
+        "rejected",
+        "rejected",
+        "rejected",
+        "approved",
+        "approved"
+      ]
+    },
+    {
+      "id": 5,
+      "publishDate": "25-SEP-2024",
+      "studentName": "يوسف إبراهيم محمود",
+      "studentEmail": "youssef.ibrahim@student.edu.qa",
+      "activityDate": "2024-09-28T13:00:00",
+      "organizer": "اتحاد الطلاب",
+      "status": [
+        "pending",
+        "pending",
+        "pending",
+        "approved",
+        "approved",
+        "approved"
+      ]
+    },
+    {
+      "id": 6,
+      "publishDate": "25-SEP-2024",
+      "studentName": "سارة عمر الحسن",
+      "studentEmail": "sara.omar@student.edu.qa",
+      "activityDate": "2024-09-30T15:00:00",
+      "organizer": "اللجنة الاجتماعية",
+      "status": [
+        "pending",
+        "pending",
+        "pending",
+        "pending",
+        "pending",
+        "pending"
+      ]
+    },
+    {
+      "id": 7,
+      "publishDate": "25-SEP-2024",
+      "studentName": "محمد ناصر القاسم",
+      "studentEmail": "mohammed.naser@student.edu.qa",
+      "activityDate": "2024-10-01T09:00:00",
+      "organizer": "النادي التطوعي",
+      "status": [
+        "approved",
+        "approved",
+        "approved",
+        "approved",
+        "approved",
+        "approved"
+      ]
+    },
+    {
+      "id": 8,
+      "publishDate": "26-SEP-2024",
+      "studentName": "نور الدين محمد",
+      "studentEmail": "nouraldeen.m@student.edu.qa",
+      "activityDate": "2024-10-05T14:00:00",
+      "organizer": "النادي الفني",
+      "status": [
+        "pending",
+        "pending",
+        "pending",
+        "pending",
+        "pending",
+        "pending"
+      ]
+    },
+    {
+      "id": 9,
+      "publishDate": "26-SEP-2024",
+      "studentName": "ليلى عبدالرحمن",
+      "studentEmail": "laila.abdelrahman@student.edu.qa",
+      "activityDate": "2024-10-08T12:00:00",
+      "organizer": "لجنة الأنشطة",
+      "status": [
+        "approved",
+        "approved",
+        "pending",
+        "pending",
+        "pending",
+        "pending"
+      ]
+    }
+  ],
+  "statusLabels": {
+    "professor": "الأستاذ",
+    "viceDeanStudentAffairs": "وكيل شؤون الطلاب",
+    "dean": "العميد",
+    "unionLeader": "رئيس الاتحاد",
+    "deanship": "العمادة",
+    "deanshipStudentAffairs": "عمادة شؤون الطلاب"
+  },
+  "statusOrder": [
+    "professor",
+    "viceDeanStudentAffairs",
+    "dean",
+    "unionLeader",
+    "deanship",
+    "deanshipStudentAffairs"
+  ],
+  "colorMapping": {
+    "approved": "green",
+    "pending": "orange",
+    "rejected": "red"
+  }
+}

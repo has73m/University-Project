@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Student Form</title>
+    <link rel="stylesheet" href="../css/studentFormView.css" />
+    <script defer src="../js/studentFormView.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <input type="checkbox" id="active-bar" />
+      <div id="sideBar">
+        <label id="closeBar" for="active-bar"
+          ><img
+            class="styled-svg"
+            src="../images/hide-sidebar-horiz-svgrepo-com(1).svg"
+            alt="My SVG Icon"
+            width="20px"
+            height="20px"
+        /></label>
+        <label id="openBar" for="active-bar"
+          ><img
+            class="styled-svg"
+            src="../images/open-sidebar-horiz-svgrepo-com(2).svg"
+            alt="My SVG Icon"
+            width="20px"
+            height="20px"
+        /></label>
+        <div id="logo">
+          <img src="../images/logo4.jpg" alt="JU LOGO" />
+          <div class="title">بوابـــة إدارة الفعــاليــات</div>
+        </div>
+        <nav>
+          <ul>
+            <a href="index.html">
+              <li>
+                <img
+                  src="../images/house-02-svgrepo-com.svg"
+                  alt="homepage"
+                  class="icon"
+                />
+                <div class="navTitle">الرئيسية</div>
+              </li>
+            </a>
+            <a href="create-event.html">
+              <li>
+                <img
+                  src="../images/pen-square-svgrepo-com.svg"
+                  alt="create event"
+                  class="icon"
+                />
+                <div class="navTitle">انشاء نشاط</div>
+              </li>
+            </a>
+            <a href="dashboard.html">
+              <li>
+                <img
+                  src="../images/panel-sectioned-svgrepo-com(4).svg"
+                  alt="profile"
+                  class="icon"
+                />
+                <div class="navTitle">لوحة المعلومات</div>
+              </li>
+            </a>
+            <a href="profile.html">
+              <li>
+                <img
+                  src="../images/profile-2-svgrepo-com.svg"
+                  alt="info"
+                  class="icon"
+                />
+                <div class="navTitle">المستخدم</div>
+              </li>
+            </a>
+            <a href="logout.html">
+              <li>
+                <img
+                  src="../images/log-out-svgrepo-com(2).svg"
+                  alt="logout"
+                  class="icon"
+                />
+                <div class="navTitle">خروج</div>
+              </li>
+            </a>
+          </ul>
+        </nav>
+      </div>
+      <div class="form">
+        <form action="" method="post">
+          <section>
+            <div class="form-grid">
+              <div class="title-date">
+                <h1 class="topTitle">اسم النشاط</h1>
+                <div class="date">تاريخ انشاء النشاط</div>
+              </div>
+              <div>
+                <h1 class="topTitle stepTitle">تسلسل قبول النشاط</h1>
+
+                <div class="steps-container">
+                  <div class="step">
+                    <img
+                      id="admin"
+                      src="../images/circle-undecided.svg"
+                      alt="المشرف"
+                      class="step-circle"
+                    />
+                    <div class="step-label">المشرف</div>
+                  </div>
+
+                  <div class="step">
+                    <img
+                      id="viceDean"
+                      src="../images/circle-undecided.svg"
+                      alt="مساعد العميد لشؤون الطلبة"
+                      class="step-circle"
+                    />
+                    <div class="step-label">مساعد العميد<br />لشؤون الطلبة</div>
+                  </div>
+
+                  <div class="step">
+                    <img
+                      id="dean"
+                      src="../images/circle-undecided.svg"
+                      alt="العميد"
+                      class="step-circle"
+                    />
+                    <div class="step-label">العميد</div>
+                  </div>
+
+                  <div class="step">
+                    <img
+                      id="union"
+                      src="../images/circle-undecided.svg"
+                      alt="رئيس الاتحاد"
+                      class="step-circle"
+                    />
+                    <div class="step-label">رئيس الاتحاد</div>
+                  </div>
+
+                  <div class="step">
+                    <img
+                      id="deanship"
+                      src="../images/circle-undecided.svg"
+                      alt="العمادة"
+                      class="step-circle"
+                    />
+                    <div class="step-label">العمادة</div>
+                  </div>
+
+                  <div class="step">
+                    <img
+                      id="deanshipStudentAffair"
+                      src="../images/circle-undecided.svg"
+                      alt="عميد شؤون الطلبة"
+                      class="step-circle"
+                    />
+                    <div class="step-label">عميد شؤون الطلبة</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>البيانات المطلوب تعبئتها من الطالب</h2>
+            <div class="form-grid">
+              <div class="input-sec1">
+                <label for="sname">اسم الطالب</label>
+                <input
+                  required
+                  name="sname"
+                  id="sname"
+                  type="text"
+                  placeholder="اسم الطالب"
+                  disabled
+                />
+              </div>
+              <div class="input-sec1">
+                <label for="sId">رقم الطالب الجامعي</label>
+                <input
+                  id="sId"
+                  name="sId"
+                  type="text"
+                  placeholder="رقم الطالب الجامعي"
+                  disabled
+                />
+              </div>
+              <div class="input-sec1">
+                <label for="email">البريد الإلكتروني</label>
+                <input
+                  required
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="البريد الإلكتروني"
+                  disabled
+                />
+              </div>
+              <div class="input-sec1">
+                <label for="phoneNo">رقم الهاتف</label>
+                <input
+                  id="phoneNO"
+                  name="phoneNo"
+                  type="tel"
+                  placeholder="رقم الهاتف"
+                  required
+                  disabled
+                />
+              </div>
+              <div class="input-sec1">
+                <label for="eventOrganizer">اسم الجهة مقدمة النشاط</label>
+                <input
+                  id="eventOrganizer"
+                  name="eventOrganizer"
+                  type="text"
+                  placeholder="اسم الجهة مقدمة النشاط"
+                  required
+                  disabled
+                />
+              </div>
+              <div class="input-sec1">
+                <label for="college">اختر الكلية</label>
+                <select required id="college" name="college" disabled>
+                  <option>اختر الكلية</option>
+                </select>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2>معلومات النشاط</h2>
+            <div class="form-grid">
+              <div class="form-section">
+                <div class="section-title">اختر نوع النشاط</div>
+                <p class="requiredCheckbox">هذه الخانة اجبارية</p>
+                <div class="checkbox-group">
+                  <div class="checkbox-item">
+                    <input
+                      class="activityCheckbox"
+                      type="checkbox"
+                      id="other"
+                      name="activityTypes"
+                      value="اخرى"
+                      disabled
+                    />
+                    <label for="other">اخرى</label>
+                  </div>
+
+                  <div class="checkbox-item">
+                    <input
+                      class="activityCheckbox"
+                      type="checkbox"
+                      id="competition"
+                      name="activityTypes"
+                      value="مسابقة"
+                      disabled
+                    />
+                    <label for="competition">مسابقة</label>
+                  </div>
+
+                  <div class="checkbox-item">
+                    <input
+                      class="activityCheckbox"
+                      type="checkbox"
+                      id="exhibition"
+                      name="activityTypes"
+                      value="معرض"
+                      disabled
+                    />
+                    <label for="exhibition">معرض</label>
+                  </div>
+
+                  <div class="checkbox-item">
+                    <input
+                      class="activityCheckbox"
+                      type="checkbox"
+                      id="workshop"
+                      name="activityTypes"
+                      value="ورشة"
+                      disabled
+                    />
+                    <label for="workshop">ورشة</label>
+                  </div>
+
+                  <div class="checkbox-item">
+                    <input
+                      class="activityCheckbox"
+                      type="checkbox"
+                      id="trainingCourse"
+                      name="activityTypes"
+                      value="دورة تدريبية"
+                      disabled
+                    />
+                    <label for="trainingCourse">دورة تدريبية</label>
+                  </div>
+
+                  <div class="checkbox-item">
+                    <input
+                      class="activityCheckbox"
+                      type="checkbox"
+                      id="lecture"
+                      name="activityTypes"
+                      value="محاضرة"
+                      disabled
+                    />
+                    <label for="lecture">محاضرة</label>
+                  </div>
+
+                  <div class="checkbox-item">
+                    <input
+                      class="activityCheckbox"
+                      type="checkbox"
+                      id="initiative"
+                      name="activityTypes"
+                      value="مبادرة"
+                      disabled
+                    />
+                    <label for="initiative">مبادرة</label>
+                  </div>
+                </div>
+                <div
+                  id="otherTextBox"
+                  class="other-text-container"
+                  style="display: none"
+                >
+                  <input
+                    type="text"
+                    id="otherText"
+                    name="otherActivityType"
+                    placeholder="يرجى تحديد نوع النشاط"
+                    disabled
+                  />
+                </div>
+              </div>
+
+              <div class="input-sec2">
+                <label for="eventTitle">اسم عنوان الفعالية</label>
+                <input
+                  type="text"
+                  id="eventTitle"
+                  name="eventTitle"
+                  placeholder="اسم عنوان الفعالية"
+                  required
+                  disabled
+                />
+              </div>
+              <div class="input-sec2">
+                <label for="eventTitle"
+                  >اسم عنوان الفعالية في الاعلان (اذا كان هناك اختلاف مع عنوان
+                  الفعالية سيتم الغاء الفعالية)
+                </label>
+                <input
+                  type="text"
+                  id="eventTitleInPoster"
+                  name="eventTitleInPoster"
+                  placeholder="اسم عنوان الفعالية في الاعلان"
+                  required
+                  disabled
+                />
+              </div>
+
+              <div class="input-sec2">
+                <label for="activityDescription">وصف النشاط</label>
+                <textarea
+                  id="activityDescription"
+                  name="activityDescription"
+                  placeholder="وصف النشاط"
+                  required
+                  disabled
+                ></textarea>
+              </div>
+
+              <div class="input-sec2">
+                <label for="activityGoals">أهداف النشاط</label>
+                <textarea
+                  id="activityGoals"
+                  name="activityGoals"
+                  placeholder="أهداف النشاط"
+                  required
+                  disabled
+                ></textarea>
+              </div>
+
+              <div class="input-sec2">
+                <label for="attendanceType"
+                  >نوع الحضور<span>
+                    (طلبة، ضيوف من خارج الجامعة، أكاديميين، إداريين...)</span
+                  ></label
+                >
+                <input
+                  type="text"
+                  id="attendanceType"
+                  name="attendanceType"
+                  placeholder="نوع الحضور"
+                  required
+                  disabled
+                />
+              </div>
+
+              <div class="input-sec2">
+                <label for="eventDate">تاريخ الفعالية</label>
+                <input
+                  type="date"
+                  id="eventDate"
+                  name="eventDate"
+                  required
+                  disabled
+                />
+              </div>
+              <div id="time-section">
+                <div id="timeStart" class="input-sec2">
+                  <label for="startTime">وقت البداية</label>
+                  <input
+                    type="time"
+                    id="startTime"
+                    name="startTime required"
+                    disabled
+                  />
+                </div>
+                <div id="timeEnd" class="input-sec2">
+                  <label for="endTime">وقت النهاية</label>
+                  <input
+                    type="time"
+                    id="endTime"
+                    name="endTime required"
+                    disabled
+                  />
+                </div>
+              </div>
+
+              <div class="input-sec2">
+                <label for="expectedCost"
+                  >التكلفة المالية المترتبة على إقامة النشاط
+                  <span>(مع ذكر وإرفاق التفاصيل)</span></label
+                >
+                <input
+                  type="text"
+                  id="expectedCost"
+                  name="expectedCost"
+                  placeholder="ادخل التكلفة المالية "
+                  required
+                  disabled
+                />
+              </div>
+
+              <div class="input-sec2">
+                <label for="hasSponsor"
+                  >الخدمات المساندة المطلوب توفرها لإقامة النشاط
+                  <span
+                    >(مثل مخاطبة الأمن الجامعي، احتساب نقطة نشاط، حجز قاعة
+                    وغيرها)</span
+                  ></label
+                >
+                <input
+                  type="text"
+                  id="support"
+                  name="support"
+                  placeholder="ادخل الخدمات المساندة المطلوب توفرها لإقامة النشاط"
+                  required
+                  disabled
+                />
+              </div>
+              <div class="input-sec2">
+                <label for="hasSponsor"
+                  >هل سيتم إظهار أي بانر أو دعاية (مهما كانت) لأي داعم أو متبرع؟
+                  <span>مع ذكر التفاصيل</span></label
+                >
+                <input
+                  type="text"
+                  id="sponsor"
+                  name="sponsor"
+                  placeholder="الرجاء الذكر مع التفاصيل"
+                  required
+                  disabled
+                />
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2>مشرف النشاط</h2>
+            <div class="form-grid">
+              <div class="input-sec3">
+                <label for="collegeName">اختر الكلية</label>
+                <select id="collegeName" name="collegeName" disabled>
+                  <option value="">اختر الكلية</option>
+                </select>
+              </div>
+
+              <div class="input-sec3">
+                <label for="facultyMemberName">اسم عضو هيئة التدريس</label>
+                <select
+                  id="facultyMemberName"
+                  name="facultyMemberName"
+                  disabled
+                >
+                  <option value="">اسم عضو هيئة التدريس</option>
+                </select>
+              </div>
+
+              <div class="input-sec3">
+                <label for="phoneNumber">رقم الهاتف</label>
+                <input
+                  type="tel"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  placeholder="رقم الهاتف"
+                  required
+                  disabled
+                />
+              </div>
+            </div>
+          </section>
+          <section class="attachments-section">
+            <h2>المرفقات المطلوبة</h2>
+
+            <div class="attachments-grid">
+              <!-- Attachment 2 -->
+              <div class="attachment-block">
+                <p class="helper-text">
+                  هل يوجد ضيوف (ضيف من خارج الجامعة)؟
+                  <span> (إذا كانت الإجابة نعم إرفاق سيرة ذاتيه) </span>
+                </p>
+
+                <input
+                  type="text"
+                  placeholder="اذكر الضيوف من خارج الجامعة"
+                  disabled
+                />
+                <a href="#" id="materials_documentsLink">
+                  <label for="guest_documents" class="upload-area">
+                    <span id="guest_documentsUploadIcon" class="upload-icon"
+                      ><img
+                        class="uploadIcon"
+                        src="../images/folder-check-svgrepo-com(1).svg"
+                        alt="folder"
+                    /></span>
+                    <span
+                      id="guest_documentsUploadText"
+                      class="upload-text"
+                    ></span>
+                    <span id="guest_documentsuploadBtn" class="upload-btn"
+                      >تحميل</span
+                    >
+                  </label>
+                </a>
+
+                <p class="file-note">File Format: PNG, PDF</p>
+              </div>
+              <!-- Attachment 1 -->
+              <div class="attachment-block">
+                <p class="helper-text">
+                  هل يوجد راعيين أو داعمين أو متبرعين للنشاط؟
+                  <span> (إذا كانت الإجابة نعم يرجى إرفاق نسخة) </span>
+                </p>
+
+                <a href="#" id="materials_documentsLink">
+                  <label for="supporting_documents" class="upload-area">
+                    <span
+                      id="supporting_documentsUploadIcon"
+                      class="upload-icon"
+                      ><img
+                        class="uploadIcon"
+                        src="../images/folder-check-svgrepo-com(1).svg"
+                        alt="folder"
+                    /></span>
+                    <!-- put the file name here using href -->
+                    <span
+                      id="supporting_documentsUploadText"
+                      class="upload-text"
+                      >file.pdf</span
+                    >
+                    <span id="supporting_documentsUploadbtn" class="upload-btn"
+                      >تحميل</span
+                    >
+                  </label>
+                </a>
+
+                <input
+                  type="file"
+                  id="supporting_documents"
+                  name="supporting_documents"
+                  accept=".png,.pdf"
+                  hidden
+                  disabled
+                />
+
+                <p class="file-note">File Format: PNG, PDF</p>
+              </div>
+
+              <!-- Attachment 3 (Full width) -->
+              <div class="attachment-block full-width">
+                <p class="helper-text">
+                  هل سيتم توزيع أي مواد (ورقية، دعائية، أو ضيافة) أو عرضها على
+                  الطلبة؟
+                  <span
+                    >(إذا كانت الإجابة نعم يرجى ذكر نوع المواد وإرفاق نسخة عن كل
+                    ما سيتم توزيعه)</span
+                  >
+                </p>
+
+                <input type="text" placeholder="اذكر المواد" disabled />
+
+                <a href="#" id="materials_documentsLink">
+                  <label for="materials_documents" class="upload-area">
+                    <span id="materials_documentsUploadIcon" class="upload-icon"
+                      ><img
+                        class="uploadIcon"
+                        src="../images/folder-check-svgrepo-com(1).svg"
+                        alt="folder"
+                    /></span>
+                    <!-- put the file name here using href -->
+                    <span id="materials_documentsUploadText" class="upload-text"
+                      >file.pdf</span
+                    >
+                    <span id="materials_documentsUploadBtn" class="upload-btn"
+                      >تحميل</span
+                    >
+                  </label>
+                </a>
+
+                <p class="file-note">File Format: PNG, PDF</p>
+              </div>
+            </div>
+          </section>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
