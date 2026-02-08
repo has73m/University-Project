@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <script defer src="../js/dashboard.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <input type="checkbox" id="active-bar" />
+      <div id="sideBar">
+        <label id="closeBar" for="active-bar"
+          ><img
+            class="styled-svg"
+            src="../images/hide-sidebar-horiz-svgrepo-com(1).svg"
+            alt="My SVG Icon"
+            width="20px"
+            height="20px"
+        /></label>
+        <label id="openBar" for="active-bar"
+          ><img
+            class="styled-svg"
+            src="../images/open-sidebar-horiz-svgrepo-com(2).svg"
+            alt="My SVG Icon"
+            width="20px"
+            height="20px"
+        /></label>
+        <div id="logo">
+          <img src="../images/logo4.jpg" alt="JU LOGO" />
+          <div class="title">بوابـــة إدارة الفعــاليــات</div>
+        </div>
+        <nav>
+          <ul>
+            <a href="index.html">
+              <li>
+                <img
+                  src="../images/house-02-svgrepo-com.svg"
+                  alt="homepage"
+                  class="icon"
+                />
+                <div class="navTitle">الرئيسية</div>
+              </li>
+            </a>
+            <a href="create-event.html">
+              <li>
+                <img
+                  src="../images/pen-square-svgrepo-com.svg"
+                  alt="create event"
+                  class="icon"
+                />
+                <div class="navTitle">انشاء نشاط</div>
+              </li>
+            </a>
+            <a href="dashboard.html">
+              <li id="infoPanel">
+                <img
+                  src="../images/panel-sectioned-svgrepo-com(4).svg"
+                  alt="profile"
+                  class="icon"
+                />
+                <div class="navTitle">لوحة المعلومات</div>
+              </li>
+            </a>
+            <a href="profile.html">
+              <li>
+                <img
+                  src="../images/profile-2-svgrepo-com.svg"
+                  alt="info"
+                  class="icon"
+                />
+                <div class="navTitle">المستخدم</div>
+              </li>
+            </a>
+            <a href="logout.html">
+              <li>
+                <img
+                  src="../images/log-out-svgrepo-com(2).svg"
+                  alt="logout"
+                  class="icon"
+                />
+                <div class="navTitle">خروج</div>
+              </li>
+            </a>
+          </ul>
+        </nav>
+      </div>
+      <div class="dashboard-container">
+        <!-- Stats Cards -->
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-icon red">
+              <div class="stat-dot red"></div>
+            </div>
+            <div class="stat-info overdue">
+              <span class="stat-label">المتأخرة</span>
+              <!-- <span class="stat-value">3</span> -->
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon green">
+              <div class="stat-dot green"></div>
+            </div>
+            <div class="stat-info completed">
+              <span class="stat-label">المكتملة</span>
+              <!-- <span class="stat-value">3</span> -->
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon orange">
+              <div class="stat-dot orange"></div>
+            </div>
+            <div class="stat-info pending">
+              <span class="stat-label">قيد الانتظار</span>
+              <!-- <span class="stat-value">3</span> -->
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon blue">
+              <div class="stat-dot blue"></div>
+            </div>
+            <div class="stat-info total">
+              <span class="stat-label">الكل</span>
+              <!-- <span class="stat-value">3</span> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Control Bar -->
+        <div class="control-bar">
+          <a href="studentForm.html">
+            <button class="add-request-btn">
+              <span>+</span>
+              <span>طلب جديد</span>
+            </button>
+          </a>
+
+          <div class="filters">
+            <select class="filter-select">
+              <option>ترتيب حسب التاريخ</option>
+
+              <option id="older">أقدم أولا</option>
+              <option id="newer">أحدث أولا</option>
+            </select>
+            <select class="filter-select">
+              <option>ترتيب حسب الحالة</option>
+              <option id="all">الكل</option>
+              <option id="waiting">قيد الانتظار</option>
+              <option id="accepted">مقبول</option>
+              <option id="rejected">مرفوض</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Requests Table -->
+        <div class="requests-table">
+          <table>
+            <thead>
+              <tr>
+                <th>تاريخ النشر</th>
+                <th>اسم الطالب</th>
+                <th>تاريخ النشاط</th>
+                <th>المشرف</th>
+                <th id="orderState">حالة الطلب</th>
+                <th>تفاصيل</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr>
+                <td>25-SEP-2024</td>
+                <td>بريد@الطلب</td>
+                <td>Date & Time</td>
+                <td>Organizer</td>
+                <td>
+                  <div class="status-dots">
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                  </div>
+                </td>
+                <td><a href="#" class="request-link">تفاصيل الطلب</a></td>
+              </tr>
+              <tr>
+                <td>25-SEP-2024</td>
+                <td>بريد@الطلب</td>
+                <td>Date & Time</td>
+                <td>Organizer</td>
+                <td>
+                  <div class="status-dots">
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                  </div>
+                </td>
+                <td><a href="#" class="request-link">تفاصيل الطلب</a></td>
+              </tr>
+              <tr>
+                <td>25-SEP-2024</td>
+                <td>بريد@الطلب</td>
+                <td>Date & Time</td>
+                <td>Organizer</td>
+                <td>
+                  <div class="status-dots">
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                  </div>
+                </td>
+                <td><a href="#" class="request-link">تفاصيل الطلب</a></td>
+              </tr>
+              <tr>
+                <td>25-SEP-2024</td>
+                <td>بريد@الطلب</td>
+                <td>Date & Time</td>
+                <td>Organizer</td>
+                <td>
+                  <div class="status-dots">
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                  </div>
+                </td>
+                <td><a href="#" class="request-link">تفاصيل الطلب</a></td>
+              </tr>
+              <tr>
+                <td>25-SEP-2024</td>
+                <td>بريد@الطلب</td>
+                <td>Date & Time</td>
+                <td>Organizer</td>
+                <td>
+                  <div class="status-dots">
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                  </div>
+                </td>
+                <td><a href="#" class="request-link">تفاصيل الطلب</a></td>
+              </tr>
+              <tr>
+                <td>25-SEP-2024</td>
+                <td>بريد@الطلب</td>
+                <td>Date & Time</td>
+                <td>Organizer</td>
+                <td>
+                  <div class="status-dots">
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                  </div>
+                </td>
+                <td><a href="#" class="request-link">تفاصيل الطلب</a></td>
+              </tr>
+              <tr>
+                <td>25-SEP-2024</td>
+                <td>بريد@الطلب</td>
+                <td>Date & Time</td>
+                <td>Organizer</td>
+                <td>
+                  <div class="status-dots">
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                    <img class="status-dot orange" src="../images/circle-undecided.svg"></img>
+                  </div>
+                </td>
+                <td><a href="#" class="request-link">تفاصيل الطلب</a></td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination"></div>
+      </div>
+    </div>
+  </body>
+</html>
